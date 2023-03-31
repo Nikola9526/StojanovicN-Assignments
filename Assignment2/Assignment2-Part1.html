@@ -11,14 +11,14 @@
             <table>
                 <tr>
                     <td><label for="roomrental">Room Rental:</label></td>
-                    <td><input type="text" id="roomrental1" name="rRental1"></td>
+                    <td><input onchange="calculateNew()" type="text" id="box_1" name="rRental1"></td>
                 </tr>
                 <tr>
                     <td><label for="food2">Food:</label></td>
-                    <td> <input type="text" id="food2" name="food2"></td>
+                    <td> <input onchange="calculateNew()" type="text" id="box_2" name="food2"></td>
                 </tr>
                     <td><label for="enterM3">Entertainment:</label></td>
-                    <td><input type="text" id="enterM3" name="enterM3"></td>
+                    <td><input onchange="calculateNew()" type="text" id="box_3" name="enterM3"></td>
                 
 
                 <tr>
@@ -28,12 +28,49 @@
                 </tr>
                 <tr>
                     <td><label for="total_value_withTax">With Tax(13%):</label></td>
-                    <td><input type="text" ></td>
+                    <td><input type="text" id="total_value_withTax"></td>
                 </tr>
-                <tr></tr>
+                
 
 
             </table>
+
+            <script>
+                var $ = function(id) {
+                    return document.getElementById(id);
+                }
+
+                var calculateNew = function() {
+                    var box1 = Number(document.getElementById("box_1").value);
+                    var box2 = Number(document.getElementById("box_2").value);
+                    var box3 = Number(document.getElementById("box_3").value);
+
+                    var totalSum = box1 + box2 + box3 
+
+                    document.getElementById("total_value").value = totalSum
+
+                    var totalSumTax = totalSum + totalSum * 0.13
+
+                    document.getElementById("total_value_withTax").value = totalSumTax
+
+
+
+
+
+
+                }
+
+                
+
+
+            
+
+
+
+
+
+
+            </script>
             
 
             
