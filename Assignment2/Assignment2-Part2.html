@@ -9,7 +9,7 @@
 
         <h2><strong>Capital:</strong></h2>
 
-        <p id="capitalName">OTTAWA</p> <!--hidden-->
+        <p id="capitalName">OTTAWA</p> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
 
         <button onclick="Hide()">Hide capital name</button> <br><br>
         <button onclick="show()">Show capital name</button><br><br>
@@ -19,10 +19,16 @@
 
             var Hide = function() {
 
-                document.getElementById("capitalName").style.display = "block"
+                document.getElementById("capitalName").style.visibility= "hidden";
 
 
 
+
+            }
+
+            var show = function () {
+
+                document.getElementById("capitalName").style.visibility= "visible";
             }
 
 
