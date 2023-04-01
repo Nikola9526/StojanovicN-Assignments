@@ -9,11 +9,18 @@
 
         <h2><strong>Capital:</strong></h2>
 
-        <p id="capitalName">OTTAWA</p> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
+        <p id="capitalName">OTTAWA</p> <br> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
+       
+
+
+    
 
         <button onclick="Hide()">Hide capital name</button> <br><br>
         <button onclick="show()">Show capital name</button><br><br>
-        <button onclick="">Toggle</button>
+        <button onclick="">Toggle</button><br><br>
+
+        <p id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</p><br>
+        <p id="clickPara" onclick="changeToGreen()">Click on this paragraph for Green example</p>
 
         <script>
 
@@ -21,15 +28,26 @@
 
                 document.getElementById("capitalName").style.visibility= "hidden";
 
-
-
-
             }
 
             var show = function () {
 
                 document.getElementById("capitalName").style.visibility= "visible";
             }
+
+            var changeToYellow = function () {
+                document.getElementById("hoverPara").style.backgroundColor ="yellow";
+            }
+
+            var changeBackToWhite = function() {
+                document.getElementById("hoverPara").style.backgroundColor = "white";
+            }
+
+            var changeToGreen = function() {
+                document.getElementById("clickPara").style.backgroundColor = "green";
+            }
+
+
 
 
 
