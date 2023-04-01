@@ -17,18 +17,36 @@
 
         <button onclick="Hide()">Hide capital name</button> <br><br>
         <button onclick="show()">Show capital name</button><br><br>
-        <button onclick="">Toggle</button><br><br>
+        <button onclick="toggle()">Toggle</button><br><br>
 
         <p id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</p><br>
         <p id="clickPara" onclick="changeToGreen()">Click on this paragraph for Green example</p>
 
         <script>
 
+            var toggle = function() {
+
+                 if (document.getElementById("capitalName").innerHTML == "OTTAWA") {
+                    document.getElementById("capitalName").style.visibility= "hidden"   
+                } else if (document.getElementById("capitalName").innerHTML == "") {
+                    document.getElementById("capitalName").style.visibility= "visible"
+
+                    
+                } else { 
+                    
+                } 
+                
+
+            
+            }
+
             var Hide = function() {
 
                 document.getElementById("capitalName").style.visibility= "hidden";
+                
 
             }
+            
 
             var show = function () {
 
