@@ -9,7 +9,10 @@
 
         <h2><strong>Capital:</strong></h2>
 
-        <p id="capitalName">OTTAWA</p> <br> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
+        <p id="capitalName" style="visibility: visible;">OTTAWA</p> <br> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
+       
+
+    
        
 
 
@@ -19,26 +22,26 @@
         <button onclick="show()">Show capital name</button><br><br>
         <button onclick="toggle()">Toggle</button><br><br>
 
-        <p id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</p><br>
-        <p id="clickPara" onclick="changeToGreen()">Click on this paragraph for Green example</p>
+        <p><span id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</span></p><br>
+        <p id="clickPara" onclick="changeToGreen()" style="background-color: white;">Click on this paragraph for Green example</p>
 
         <script>
 
             var toggle = function() {
 
-                 if (document.getElementById("capitalName").innerHTML == "OTTAWA") {
-                    document.getElementById("capitalName").style.visibility= "hidden"   
-                } else if (document.getElementById("capitalName").innerHTML == "") {
-                    document.getElementById("capitalName").style.visibility= "visible"
-
-                    
-                } else { 
-                    
-                } 
                 
 
+                 if (document.getElementById("capitalName").style.visibility== "hidden") {
+                    document.getElementById("capitalName").style.visibility= "visible";   
+                } else {
+                    document.getElementById("capitalName").style.visibility= "hidden";
+                    
+                }
+
+             }
+
             
-            }
+            
 
             var Hide = function() {
 
@@ -61,8 +64,16 @@
                 document.getElementById("hoverPara").style.backgroundColor = "white";
             }
 
-            var changeToGreen = function() {
-                document.getElementById("clickPara").style.backgroundColor = "green";
+            var changeToGreen = function() { // have to assign  defult value in the tag element which is white
+
+                if (document.getElementById("clickPara").style.backgroundColor == "white") {
+                    document.getElementById("clickPara").style.backgroundColor = "green";  
+                } else { 
+                    document.getElementById("clickPara").style.backgroundColor = "white";
+                    
+                }
+
+                
             }
 
 
