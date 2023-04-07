@@ -2,28 +2,60 @@
 <html>
     <head>
         <title>A2-Part2</title>
+        <style>
+            body {
+                border:solid 2px red;
+                
+                
+            }
+            main {
+                margin-top: 1.5em;
+                margin-left: 0.2em;
+                margin-right: 2em;
+                margin-bottom: 4em;
+
+            }
+           
+            span {
+                font-weight: bold;
+            }
+            button {
+                margin-left: 0.5em;
+            }
+            h2 {
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
-        <h2><strong>Country:</strong></h2>
-        <p>CANADA</p>
+        <main>
+            <h2>Country:</h2>
+            <p>CANADA</p>
+            <h2>Capital:</h2>
+            <p id="capitalName" style="visibility: visible;">OTTAWA</p> <br> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
 
-        <h2><strong>Capital:</strong></h2>
 
-        <p id="capitalName" style="visibility: visible;">OTTAWA</p> <br> <!--hidden--> <!--style="visibility: hidden;"--> <!--style="visibility: visible;"-->
+            <button onclick="Hide()">Hide capital name</button> <br><br>
+            <button onclick="show()">Show capital name</button><br><br>
+            <button onclick="toggle()">Toggle</button><br><br>
+
+
+
+
+            <span><p><span id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</span></p</span><br>
+            <span><p id="clickPara" onclick="changeToGreen()" style="background-color: white;">Click on this paragraph for Green example</p></span>
+
+        </main>
+       
+        
+
        
 
-    
        
+       
+        
 
-
-    
-
-        <button onclick="Hide()">Hide capital name</button> <br><br>
-        <button onclick="show()">Show capital name</button><br><br>
-        <button onclick="toggle()">Toggle</button><br><br>
-
-        <p><span id="hoverPara" onmouseover="changeToYellow()" onmouseleave="changeBackToWhite()">Hover on this paragraph for Yellow</span></p><br>
-        <p id="clickPara" onclick="changeToGreen()" style="background-color: white;">Click on this paragraph for Green example</p>
+        
 
         <script>
 
